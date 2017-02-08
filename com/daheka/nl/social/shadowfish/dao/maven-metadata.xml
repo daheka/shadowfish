@@ -4,8 +4,8 @@
   <artifactId>dao</artifactId>
   <versioning>
     <versions>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20170208205553</lastUpdated>
+    <lastUpdated>20170208205732</lastUpdated>
   </versioning>
 </metadata>
