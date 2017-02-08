@@ -1,3 +1,3 @@
-# Dao Branch
+# Authentication Server Branch
 
-This is where the dao project is supposed to be pushed to
+This is where the Authentication Server project is supposed to be pushed to
