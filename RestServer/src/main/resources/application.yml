@@ -1,0 +1,6 @@
+#DataSource configuration
+spring.datasource.url: jdbc:mysql://localhost:3306/shadowfish
+spring.datasource.username: daheka
+spring.datasource.password: Hammie12336612
+spring.datasource.driverClassName: com.mysql.jdbc.Driver
+error.whitelabel.enabled: false
