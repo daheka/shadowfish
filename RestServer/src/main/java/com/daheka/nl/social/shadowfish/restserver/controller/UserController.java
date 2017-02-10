@@ -1,12 +1,14 @@
 package com.daheka.nl.social.shadowfish.restserver.controller;
 
+import ch.qos.logback.classic.Logger;
 import com.daheka.nl.social.shadowfish.restserver.repository.UserRepository;
 import com.daheka.nl.social.shadowfish.dao.User;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by daheka on 2/8/17.
@@ -14,30 +16,48 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
+    private static final Logger log = (Logger) LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     UserRepository userRepository;
 
-    @RequestMapping(value="/user", method= RequestMethod.GET)
-    public User getUser(@RequestParam(value="username") String username) {
-        return userRepository.findByUsername(username);
+    @RequestMapping( value = "/user", method = RequestMethod.GET )
+    @ResponseBody
+    public Iterable<User> findAllUsers(){
+        return userRepository.findAll();
+
     }
 
-    @RequestMapping(value="/user", method=RequestMethod.DELETE)
-    public void deleteUser(@RequestParam(value="id") Long id) {
-        userRepository.delete(id);
+    @RequestMapping(value="/user/{username}", method=RequestMethod.GET)
+    @ResponseBody
+    public User findUserByName(@PathVariable("username") String username) {
+        return RestPreconditions.checkFound( userRepository.findByUsername( username ) );
     }
 
     @RequestMapping(value="/user", method=RequestMethod.POST)
-    public User createUser(@RequestParam(value="username") String username, @RequestParam(value="password") String password) {
-        User user = new User();
+    @ResponseStatus( HttpStatus.CREATED )
+    @ResponseBody
+    public User createUser(@RequestParam("username") String username, @RequestParam("password") String password) {
+        User user = new User(username, password);
         return userRepository.save(user);
     }
 
-    @RequestMapping(value="/user", method=RequestMethod.PUT)
-    public void updateUser(@RequestParam(value="username") String username, @RequestParam(value="password") String password) {
-        User user = userRepository.findByUsername(username);
-        user.setPassword(password);
+    @RequestMapping(value="/user/{id}", method=RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public User updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
+        User user = RestPreconditions.checkFound(userRepository.findOne(id));
         user.setUsername(username);
-        userRepository.save(user);
+        user.setPassword(password);
+        return userRepository.save(user);
+    }
+
+    @RequestMapping(value="/user/{id}", method=RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public User deleteUser(@PathVariable("id") Long id) {
+        User user = RestPreconditions.checkFound(userRepository.findOne(id));
+        userRepository.delete(id);
+        return user;
     }
 }
