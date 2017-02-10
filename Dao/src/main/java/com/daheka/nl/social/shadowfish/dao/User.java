@@ -17,9 +17,8 @@ public class User {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    public User() {
-        // Empty Constructor
-    }
+    @OneToOne(mappedBy = "user")
+    private Profile profile;
 
     public User(String username, String password) {
         this.username = username;
@@ -48,5 +47,9 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Long getProfileId() {
+        return profile.getId();
     }
 }
