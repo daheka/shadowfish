@@ -3,6 +3,7 @@ package com.daheka.nl.social.shadowfish.restserver.controller;
 import ch.qos.logback.classic.Logger;
 import com.daheka.nl.social.shadowfish.restserver.repository.UserRepository;
 import com.daheka.nl.social.shadowfish.dao.User;
+import com.daheka.nl.social.shadowfish.restserver.rest.RestPreconditions;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class UserController {
 
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     /**
      * Rest method to get all users

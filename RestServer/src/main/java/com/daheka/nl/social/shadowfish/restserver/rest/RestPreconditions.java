@@ -1,4 +1,4 @@
-package com.daheka.nl.social.shadowfish.restserver.controller;
+package com.daheka.nl.social.shadowfish.restserver.rest;
 
 /**
  * Condition class that checks some rest conditions

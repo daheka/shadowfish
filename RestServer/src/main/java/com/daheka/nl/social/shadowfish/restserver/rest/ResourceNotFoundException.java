@@ -1,4 +1,4 @@
-package com.daheka.nl.social.shadowfish.restserver.controller;
+package com.daheka.nl.social.shadowfish.restserver.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
