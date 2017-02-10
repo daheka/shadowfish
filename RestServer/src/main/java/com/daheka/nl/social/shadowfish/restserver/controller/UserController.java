@@ -17,9 +17,8 @@ public class UserController {
 
     private static final Logger log = (Logger) LoggerFactory.getLogger(UserController.class);
 
-
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository repository;
 
     /**
      * Rest method to get all users
@@ -28,7 +27,7 @@ public class UserController {
     @RequestMapping( value = "/user", method = RequestMethod.GET )
     @ResponseBody
     public Iterable<User> findAllUsers(){
-        return userRepository.findAll();
+        return repository.findAll();
 
     }
 
@@ -40,7 +39,7 @@ public class UserController {
     @RequestMapping(value="/user/{username}", method=RequestMethod.GET)
     @ResponseBody
     public User findUserByName(@PathVariable("username") String username) {
-        return RestPreconditions.checkFound( userRepository.findByUsername( username ) );
+        return RestPreconditions.checkFound( repository.findByUsername( username ) );
     }
 
     /**
@@ -54,7 +53,7 @@ public class UserController {
     @ResponseBody
     public User createUser(@RequestParam("username") String username, @RequestParam("password") String password) {
         User user = new User(username, password);
-        return userRepository.save(user);
+        return repository.save(user);
     }
 
     /**
@@ -68,10 +67,10 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public User updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
-        User user = RestPreconditions.checkFound(userRepository.findOne(id));
+        User user = RestPreconditions.checkFound(repository.findOne(id));
         user.setUsername(username);
         user.setPassword(password);
-        return userRepository.save(user);
+        return repository.save(user);
     }
 
     /**
@@ -83,8 +82,8 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public User deleteUser(@PathVariable("id") Long id) {
-        User user = RestPreconditions.checkFound(userRepository.findOne(id));
-        userRepository.delete(id);
+        User user = RestPreconditions.checkFound(repository.findOne(id));
+        repository.delete(id);
         return user;
     }
 }
