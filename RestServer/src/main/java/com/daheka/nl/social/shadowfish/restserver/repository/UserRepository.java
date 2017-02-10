@@ -5,10 +5,15 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by daheka on 2/8/17.
+ * Extension interface for the existing CrudRepository
  */
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
 
+    /**
+     * Method to find a user by username
+     * @param username The name of the user
+     * @return The requested user
+     */
     User findByUsername(String username);
 }

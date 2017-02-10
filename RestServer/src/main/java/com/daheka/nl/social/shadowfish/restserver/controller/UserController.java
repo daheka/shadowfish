@@ -8,19 +8,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
- * Created by daheka on 2/8/17.
+ * The rest controller for the user
  */
 @RestController
 public class UserController {
 
     private static final Logger log = (Logger) LoggerFactory.getLogger(UserController.class);
 
+
     @Autowired
     UserRepository userRepository;
 
+    /**
+     * Rest method to get all users
+     * @return A list of all users in the database
+     */
     @RequestMapping( value = "/user", method = RequestMethod.GET )
     @ResponseBody
     public Iterable<User> findAllUsers(){
@@ -28,12 +31,23 @@ public class UserController {
 
     }
 
+    /**
+     * Rest method to get one user by username
+     * @param username The name of the user
+     * @return The user that was requested
+     */
     @RequestMapping(value="/user/{username}", method=RequestMethod.GET)
     @ResponseBody
     public User findUserByName(@PathVariable("username") String username) {
         return RestPreconditions.checkFound( userRepository.findByUsername( username ) );
     }
 
+    /**
+     * Rest method to create a new user
+     * @param username The username of the new user
+     * @param password The password of the new user
+     * @return The user that was created
+     */
     @RequestMapping(value="/user", method=RequestMethod.POST)
     @ResponseStatus( HttpStatus.CREATED )
     @ResponseBody
@@ -42,6 +56,13 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    /**
+     * Rest method to update an existing user
+     * @param id The id of the to be updated user
+     * @param username The new username of the user
+     * @param password The new password of the user
+     * @return The updated user
+     */
     @RequestMapping(value="/user/{id}", method=RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
@@ -52,6 +73,11 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    /**
+     * Rest method to delete an existing user
+     * @param id The id of the to be deleted user
+     * @return The deleted user
+     */
     @RequestMapping(value="/user/{id}", method=RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody

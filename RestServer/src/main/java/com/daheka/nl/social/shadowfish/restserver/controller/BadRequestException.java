@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
- * Created by daheka on 2/10/17.
+ * Exception class that is thrown when a bad request is given
  */
 @ResponseStatus( value = HttpStatus.BAD_REQUEST )
 public class BadRequestException extends RuntimeException{
