@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Table(name="profile")
 public class Profile {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="user_id")
