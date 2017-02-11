@@ -1,12 +1,12 @@
 package com.daheka.nl.social.shadowfish.dao;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * Created by daheka on 2/10/17.
  */
+@Entity
+@Table(name="profile")
 public class Profile {
 
     private Long id;
