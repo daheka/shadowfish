@@ -1,19 +1,19 @@
 # Shadowfish Master Branch
-#Setup mysql with database and edit credentials in application.yml:
-#username: username for connection to database
-#password: password for connection to database
-#url: jdbc:mysql://localhost:3306/name_of_database
+Setup mysql with database and edit credentials in application.yml:
+username: username for connection to database
+password: password for connection to database
+url: jdbc:mysql://localhost:3306/name_of_database
 
-#Example settings.xml located in .m2/settings.xml:
+Example settings.xml located in .m2/settings.xml:
 
-#<!-- NOTE: MAKE SURE THAT settings.xml IS NOT WORLD READABLE! -->
-#<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-#          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-#          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-#                              https://maven.apache.org/xsd/settings-1.0.0.xsd">
-#<localRepository/>
-#<interactiveMode/>
-#<usePluginRegistry/>
+<!-- NOTE: MAKE SURE THAT settings.xml IS NOT WORLD READABLE! -->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                              https://maven.apache.org/xsd/settings-1.0.0.xsd">
+<localRepository/>
+<interactiveMode/>
+<usePluginRegistry/>
 <offline/>
 <pluginGroups/>
     <servers>
