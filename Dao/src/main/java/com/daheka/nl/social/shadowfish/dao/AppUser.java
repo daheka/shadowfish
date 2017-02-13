@@ -1,6 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * Created by daheka on 2/8/17.
@@ -17,6 +18,7 @@ public class AppUser {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
+    @XmlTransient
     @OneToOne(mappedBy = "appUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 

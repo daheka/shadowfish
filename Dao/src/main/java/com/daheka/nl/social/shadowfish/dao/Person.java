@@ -1,6 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * Created by daheka on 2/10/17.
@@ -31,6 +32,7 @@ public class Person {
     @Column(name="email", length=100)
     private String email;
 
+    @XmlTransient
     @OneToOne(mappedBy="person", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 
