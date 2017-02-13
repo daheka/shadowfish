@@ -21,7 +21,7 @@ public class Profile {
     @MapsId
     private Person person;
     @OneToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name="address_id")
+    @JoinColumn(name="address_id", nullable = true)
     @MapsId
     private Address address;
 
