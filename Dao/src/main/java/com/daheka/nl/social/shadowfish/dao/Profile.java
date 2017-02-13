@@ -1,7 +1,5 @@
 package com.daheka.nl.social.shadowfish.dao;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 /**
@@ -11,13 +9,13 @@ import javax.persistence.*;
 @Table(name="profile")
 public class Profile {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="user_id")
     @MapsId
-    private User user;
+    private AppUser appUser;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="person_id")
     @MapsId
@@ -39,12 +37,12 @@ public class Profile {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public AppUser getUser() {
+        return appUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(AppUser appUser) {
+        this.appUser = appUser;
     }
 
     public Person getPerson() {

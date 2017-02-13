@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name="address")
 public class Address {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     @Column(name="id")
     private Long id;
     @Column(name="street_name")
@@ -24,6 +24,10 @@ public class Address {
 
     public Address() {
         // Empty constructor
+    }
+
+    public Address(String streetName, int number) {
+
     }
 
     public Long getId() {

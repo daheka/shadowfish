@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by daheka on 2/8/17.
  */
 @Entity
-@Table(name="user")
-public class User {
+@Table(name="app_user")
+public class AppUser {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     @Column(name="id")
     private Long id;
     @Column(name="username", unique=true, length=60, nullable = false)
@@ -17,10 +17,10 @@ public class User {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(mappedBy = "appUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 
-    public User(String username, String password) {
+    public AppUser(String username, String password) {
         this.username = username;
         this.password = password;
     }
