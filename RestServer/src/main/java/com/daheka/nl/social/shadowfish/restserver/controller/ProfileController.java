@@ -47,11 +47,9 @@ public class ProfileController {
                                  @RequestParam(value="age") int age,
                                  @RequestParam(value="gender") Gender gender
                                  ) {
-        Address address = new Address();
         Person person = new Person(firstname, lastname, age, gender);
         AppUser appUser = new AppUser(username, password);
         Profile profile = new Profile();
-        profile.setAddress(address);
         profile.setPerson(person);
         profile.setUser(appUser);
         return repository.save(profile);
