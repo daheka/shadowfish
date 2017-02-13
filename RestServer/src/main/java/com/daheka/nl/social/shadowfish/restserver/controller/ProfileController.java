@@ -50,11 +50,11 @@ public class ProfileController {
                                  @RequestParam(value="age") int age,
                                  @RequestParam(value="gender") Gender gender
                                  ) {
-        User user = new User(username, password);
-        Person person = new Person(firstname, lastname, age, gender);
         Address address = new Address();
-        Profile profile = new Profile();
         address.setStreetName("willem kalfstraat");
+        Person person = new Person(firstname, lastname, age, gender);
+        User user = new User(username, password);
+        Profile profile = new Profile();
         profile.setAddress(address);
         profile.setPerson(person);
         profile.setUser(user);
