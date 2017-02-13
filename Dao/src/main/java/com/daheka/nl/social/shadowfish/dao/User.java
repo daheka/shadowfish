@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by daheka on 2/8/17.
  */
 @Entity
-@Table(name="USER")
+@Table(name="user")
 public class User {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
