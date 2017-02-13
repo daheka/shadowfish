@@ -1,8 +1,8 @@
 #Database configuration
 jdbc.driverClassName: com.mysql.jdbc.Driver
-jdbc.url: jdbc:mysql://localhost:3306/your_database # Needs to be filled with correct info
-jdbc.username: your_username # Needs to be filled with correct info
-jdbc.password: your_password # Needs to be filled with correct info
+jdbc.url: jdbc:mysql://localhost:3306/shadowfish # Needs to be filled with correct info
+jdbc.username: daheka # Needs to be filled with correct info
+jdbc.password: Hammie12336612 # Needs to be filled with correct info
 
 #Hibernate configuration
 hibernate.dialect: org.hibernate.dialect.HSQLDialect
