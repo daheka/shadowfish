@@ -2,10 +2,7 @@ package com.daheka.nl.social.shadowfish.restserver.controller;
 
 import ch.qos.logback.classic.Logger;
 import com.daheka.nl.social.shadowfish.dao.*;
-import com.daheka.nl.social.shadowfish.restserver.repository.AddressRepository;
-import com.daheka.nl.social.shadowfish.restserver.repository.PersonRepository;
 import com.daheka.nl.social.shadowfish.restserver.repository.ProfileRepository;
-import com.daheka.nl.social.shadowfish.restserver.repository.UserRepository;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,10 +31,10 @@ public class ProfileController {
         return repository.findOne(id);
     }
 
-    @RequestMapping(value="/profile/{user}", method=RequestMethod.GET)
+    @RequestMapping(value="/profile/{appUser}", method=RequestMethod.GET)
     @ResponseBody
-    public Profile findProfileByUser(@PathVariable(value="{user}") User user) {
-        return repository.findByUser(user);
+    public Profile findProfileByUser(@PathVariable(value="{appUser}") AppUser user) {
+        return repository.findByAppUser(user);
     }
 
     @RequestMapping(value="/profile", method=RequestMethod.POST)
@@ -51,13 +48,12 @@ public class ProfileController {
                                  @RequestParam(value="gender") Gender gender
                                  ) {
         Address address = new Address();
-        address.setStreetName("willem kalfstraat");
         Person person = new Person(firstname, lastname, age, gender);
-        User user = new User(username, password);
+        AppUser appUser = new AppUser(username, password);
         Profile profile = new Profile();
         profile.setAddress(address);
         profile.setPerson(person);
-        profile.setUser(user);
+        profile.setUser(appUser);
         return repository.save(profile);
     }
 
