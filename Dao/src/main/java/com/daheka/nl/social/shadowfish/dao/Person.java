@@ -31,7 +31,7 @@ public class Person {
     @Column(name="email", length=100)
     private String email;
 
-    @OneToOne(mappedBy="person")
+    @OneToOne(mappedBy="person", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 
     public Person(String firstName, String lastName, int age, Gender gender) {

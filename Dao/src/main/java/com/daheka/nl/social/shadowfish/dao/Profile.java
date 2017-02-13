@@ -1,5 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 
 /**
@@ -14,12 +16,15 @@ public class Profile {
     private Long id;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="user_id")
+    @MapsId
     private User user;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="person_id")
+    @MapsId
     private Person person;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="address_id")
+    @MapsId
     private Address address;
 
     public Profile() {

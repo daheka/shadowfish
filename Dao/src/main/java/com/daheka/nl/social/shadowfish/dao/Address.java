@@ -19,7 +19,7 @@ public class Address {
     @Column(name="zip")
     private String zip;
 
-    @OneToOne(mappedBy = "address")
+    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 
     public Address() {

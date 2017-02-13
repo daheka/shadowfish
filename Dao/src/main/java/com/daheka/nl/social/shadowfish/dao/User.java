@@ -17,7 +17,7 @@ public class User {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Profile profile;
 
     public User(String username, String password) {
