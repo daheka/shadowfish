@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name="app_user")
 public class AppUser {
 
-    @Id
+    @Id @GeneratedValue
     @Column(name="id")
     private Long id;
     @Column(name="username", unique=true, length=60, nullable = false)

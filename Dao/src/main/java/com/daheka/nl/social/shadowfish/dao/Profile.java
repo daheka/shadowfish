@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name="profile")
 public class Profile {
 
-    @Id
+    @Id @GeneratedValue
     @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.LAZY)
