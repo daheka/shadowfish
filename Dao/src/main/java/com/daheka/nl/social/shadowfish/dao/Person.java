@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Table(name="person")
 public class Person {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
 

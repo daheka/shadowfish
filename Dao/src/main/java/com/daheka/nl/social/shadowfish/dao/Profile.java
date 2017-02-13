@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name="profile")
 public class Profile {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
