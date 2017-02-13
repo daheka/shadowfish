@@ -29,8 +29,8 @@ public class PersonController {
 
     @RequestMapping(value="/person/{firstname}?{lastname}", method=RequestMethod.GET)
     @ResponseBody
-    public Person findUserByName(@PathVariable("firstname") String firstname, @PathVariable("lastname") String lastname) {
-        return RestPreconditions.checkFound( repository.findByName( firstname, lastname ) );
+    public Person findUserByName(@PathVariable("firstname") String firstname) {
+        return RestPreconditions.checkFound( repository.findByFirstName( firstname ) );
     }
 
     @RequestMapping(value="/person", method=RequestMethod.POST)
@@ -45,20 +45,20 @@ public class PersonController {
     }
 
 
-    @RequestMapping(value="/user/{id}", method=RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public Person updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
-        Person person = RestPreconditions.checkFound(repository.findOne(id));
-        return repository.save(person);
-    }
+//    @RequestMapping(value="/user/{id}", method=RequestMethod.PUT)
+//    @ResponseStatus(HttpStatus.OK)
+//    @ResponseBody
+//    public Person updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
+//        Person person = RestPreconditions.checkFound(repository.findOne(id));
+//        return repository.save(person);
+//    }
 
-    @RequestMapping(value="/person/{id}", method=RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public Person deleteUser(@PathVariable("profileId") Long id) {
-        Person person = RestPreconditions.checkFound(repository.findOne(id));
-        repository.delete(id);
-        return person;
-    }
+//    @RequestMapping(value="/person/{id}", method=RequestMethod.DELETE)
+//    @ResponseStatus(HttpStatus.OK)
+//    @ResponseBody
+//    public Person deleteUser(@PathVariable("profileId") Long id) {
+//        Person person = RestPreconditions.checkFound(repository.findOne(id));
+//        repository.delete(id);
+//        return person;
+//    }
 }
