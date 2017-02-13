@@ -12,10 +12,10 @@ public class Profile {
     @Id @GeneratedValue
     @Column(name="id")
     private Long id;
-    @OneToOne(fetch= FetchType.LAZY)
+    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name="user_id")
     private AppUser appUser;
-    @OneToOne(fetch= FetchType.LAZY)
+    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name="person_id")
     private Person person;
 //    @OneToOne(fetch= FetchType.LAZY)
