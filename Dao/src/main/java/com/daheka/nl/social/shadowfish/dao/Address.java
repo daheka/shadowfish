@@ -19,8 +19,8 @@ public class Address {
     @Column(name="zip")
     private String zip;
 
-    @OneToOne(mappedBy = "address")
-    private Profile profile;
+//    @OneToOne(mappedBy = "address")
+//    private Profile profile;
 
     public Address() {
         // Empty constructor
@@ -62,7 +62,7 @@ public class Address {
         this.zip = zip;
     }
 
-    public Long getProfileId() {
-        return profile.getId();
-    }
+//    public Long getProfileId() {
+//        return profile.getId();
+//    }
 }

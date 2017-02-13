@@ -20,10 +20,10 @@ public class Profile {
     @JoinColumn(name="person_id")
     @MapsId
     private Person person;
-    @OneToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name="address_id", nullable = true)
-    @MapsId
-    private Address address;
+//    @OneToOne(fetch= FetchType.LAZY)
+//    @JoinColumn(name="address_id", nullable = true)
+//    @MapsId
+//    private Address address;
 
     public Profile() {
         // Empty constructor
@@ -53,11 +53,11 @@ public class Profile {
         this.person = person;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 }
