@@ -14,11 +14,9 @@ public class Profile {
     private Long id;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="user_id")
-    @MapsId
     private AppUser appUser;
     @OneToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="person_id")
-    @MapsId
     private Person person;
 //    @OneToOne(fetch= FetchType.LAZY)
 //    @JoinColumn(name="address_id", nullable = true)
