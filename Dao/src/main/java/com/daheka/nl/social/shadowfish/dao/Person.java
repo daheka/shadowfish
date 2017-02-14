@@ -2,13 +2,14 @@ package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
 
 /**
  * Created by daheka on 2/10/17.
  */
 @Entity
 @Table(name="person")
-public class Person {
+public class Person implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")

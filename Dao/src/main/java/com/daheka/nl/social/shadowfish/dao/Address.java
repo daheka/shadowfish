@@ -1,6 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  */
 @Entity
 @Table(name="address")
-public class Address {
+public class Address implements Serializable {
 
     @Id @GeneratedValue
     @Column(name="id")

@@ -1,13 +1,14 @@
 package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by daheka on 2/10/17.
  */
 @Entity
 @Table(name="profile")
-public class Profile {
+public class Profile implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -24,6 +25,11 @@ public class Profile {
 
     public Profile() {
         // Empty constructor
+    }
+
+    public Profile(AppUser appUser, Person person) {
+        this.appUser = appUser;
+        this.person = person;
     }
 
     public Long getId() {
