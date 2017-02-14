@@ -15,15 +15,15 @@ public class Profile implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
-    @OneToOne(fetch= FetchType.EAGER, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="user_id")
     @JsonManagedReference
     private AppUser appUser;
-    @OneToOne(fetch= FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="person_id")
     @JsonManagedReference
     private Person person;
-    @ManyToOne(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="address_id")
     @JsonManagedReference
     private Address address;
