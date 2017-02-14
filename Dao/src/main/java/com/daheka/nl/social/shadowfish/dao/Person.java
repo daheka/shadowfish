@@ -33,7 +33,7 @@ public class Person implements Serializable {
     @Column(name="email", length=100)
     private String email;
 
-    @OneToOne(mappedBy = "person", cascade = CascadeType.PERSIST)
+    @OneToOne
     private Profile profile;
 
     public Person() {

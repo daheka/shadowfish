@@ -19,7 +19,7 @@ public class AppUser implements Serializable {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    @OneToOne(mappedBy = "appUser", cascade = CascadeType.PERSIST)
+    @OneToOne
     private Profile profile;
 
     public AppUser() {
