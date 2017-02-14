@@ -1,5 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
@@ -19,7 +21,8 @@ public class AppUser implements Serializable {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    @OneToOne
+    @OneToOne(mappedBy = "appUser", cascade = CascadeType.PERSIST)
+    @JsonIgnore
     private Profile profile;
 
     public AppUser() {

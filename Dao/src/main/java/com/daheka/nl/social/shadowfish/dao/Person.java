@@ -1,5 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
@@ -33,7 +35,8 @@ public class Person implements Serializable {
     @Column(name="email", length=100)
     private String email;
 
-    @OneToOne
+    @OneToOne(mappedBy = "person", cascade = CascadeType.PERSIST)
+    @JsonIgnore
     private Profile profile;
 
     public Person() {
