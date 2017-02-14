@@ -23,7 +23,7 @@ public class Address implements Serializable {
     @Column(name="zip")
     private String zip;
 
-    @OneToMany(mappedBy="addresses", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy="address", cascade = CascadeType.PERSIST)
     @JsonIgnore
     private List<Profile> profiles;
 
