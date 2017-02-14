@@ -29,13 +29,13 @@ public class PersonController {
 
 //    @RequestMapping(value="/person/{firstname}", method=RequestMethod.GET)
 //    @ResponseBody
-//    public Person findUserByName(@PathVariable("firstname") String firstname) {
+//    public Person findPersonByName(@PathVariable("firstname") String firstname) {
 //        return RestPreconditions.checkFound( repository.findByFirstName( firstname ) );
 //    }
 
     @RequestMapping(value = "/person/{id}", method=RequestMethod.GET)
     @ResponseBody
-    public Person findPersonById(@PathVariable(value="{id}") Long id) {
+    public Person findPersonById(@PathVariable(value="id") Long id) {
         return repository.findOne(id);
     }
 
@@ -52,20 +52,30 @@ public class PersonController {
     }
 
 
-//    @RequestMapping(value="/user/{id}", method=RequestMethod.PUT)
-//    @ResponseStatus(HttpStatus.OK)
-//    @ResponseBody
-//    public Person updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
-//        Person person = RestPreconditions.checkFound(repository.findOne(id));
-//        return repository.save(person);
-//    }
+    @RequestMapping(value="/person/{id}", method=RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Person updatePerson(@PathVariable("id") Long id,
+                               @RequestParam("firstname") String firstname,
+                               @RequestParam("lastname") String lastname,
+                               @RequestParam("age") int age,
+                               @RequestParam("gender") Gender gender,
+                               @RequestParam("email") String email) {
+        Person person = RestPreconditions.checkFound(repository.findOne(id));
+        person.setFirstName(firstname);
+        person.setLastName(lastname);
+        person.setAge(age);
+        person.setEmail(email);
+        person.setGender(gender);
+        return repository.save(person);
+    }
 
-//    @RequestMapping(value="/person/{id}", method=RequestMethod.DELETE)
-//    @ResponseStatus(HttpStatus.OK)
-//    @ResponseBody
-//    public Person deleteUser(@PathVariable("profileId") Long id) {
-//        Person person = RestPreconditions.checkFound(repository.findOne(id));
-//        repository.delete(id);
-//        return person;
-//    }
+    @RequestMapping(value="/person/{id}", method=RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    @ResponseBody
+    public Person deletePerson(@PathVariable("id") Long id) {
+        Person person = RestPreconditions.checkFound(repository.findOne(id));
+        repository.delete(id);
+        return person;
+    }
 }
