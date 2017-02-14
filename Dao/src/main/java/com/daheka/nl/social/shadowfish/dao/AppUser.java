@@ -18,8 +18,7 @@ public class AppUser {
     @Column(name="password", length=60, nullable=false)
     private String password;
 
-    @XmlTransient
-    @OneToOne(mappedBy = "appUser", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(mappedBy = "appUser")
     private Profile profile;
 
     public AppUser(String username, String password) {
@@ -51,7 +50,11 @@ public class AppUser {
         this.password = password;
     }
 
-    public Long getProfileId() {
-        return profile.getId();
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }

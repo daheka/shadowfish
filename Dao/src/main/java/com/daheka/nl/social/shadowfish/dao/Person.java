@@ -32,8 +32,7 @@ public class Person {
     @Column(name="email", length=100)
     private String email;
 
-    @XmlTransient
-    @OneToOne(mappedBy="person", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(mappedBy = "person")
     private Profile profile;
 
     public Person(String firstName, String lastName, int age, Gender gender) {
@@ -99,7 +98,11 @@ public class Person {
         this.email = email;
     }
 
-    public Long getProfileId() {
-        return profile.getId();
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }

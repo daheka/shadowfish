@@ -12,16 +12,18 @@ public class Profile {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
-    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
-    @JoinColumn(name="user_id")
+    @OneToOne(fetch= FetchType.EAGER, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JoinColumn(name="user_id")
+    @PrimaryKeyJoinColumn
     private AppUser appUser;
-    @OneToOne(fetch= FetchType.EAGER, cascade = CascadeType.PERSIST)
-    @JoinColumn(name="person_id")
+    @OneToOne(fetch= FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JoinColumn(name="person_id")
+    @PrimaryKeyJoinColumn
     private Person person;
-//    @OneToOne(fetch= FetchType.LAZY)
-//    @JoinColumn(name="address_id", nullable = true)
-//    @MapsId
-//    private Address address;
+    @ManyToOne(fetch= FetchType.LAZY, optional = true, cascade = CascadeType.ALL)
+//    @JoinColumn(name="address_id")
+    @PrimaryKeyJoinColumn
+    private Address address;
 
     public Profile() {
         // Empty constructor
@@ -51,11 +53,11 @@ public class Profile {
         this.person = person;
     }
 
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 }

@@ -1,6 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by daheka on 2/10/17.
@@ -19,8 +20,8 @@ public class Address {
     @Column(name="zip")
     private String zip;
 
-//    @OneToOne(mappedBy = "address")
-//    private Profile profile;
+    @OneToMany(mappedBy = "address")
+    private List<Profile> profiles;
 
     public Address() {
         // Empty constructor
@@ -62,7 +63,11 @@ public class Address {
         this.zip = zip;
     }
 
-//    public Long getProfileId() {
-//        return profile.getId();
-//    }
+    public List<Profile> getProfiles() {
+        return profiles;
+    }
+
+    public void setProfiles(List<Profile> profiles) {
+        this.profiles = profiles;
+    }
 }
