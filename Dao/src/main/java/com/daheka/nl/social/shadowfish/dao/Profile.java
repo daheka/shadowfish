@@ -1,5 +1,7 @@
 package com.daheka.nl.social.shadowfish.dao;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -15,12 +17,15 @@ public class Profile implements Serializable {
     private Long id;
     @OneToOne(fetch= FetchType.EAGER, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="user_id")
+    @JsonManagedReference
     private AppUser appUser;
     @OneToOne(fetch= FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="person_id")
+    @JsonManagedReference
     private Person person;
-    @ManyToOne(fetch= FetchType.LAZY, optional = true, cascade = CascadeType.ALL)
+    @ManyToOne(fetch= FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name="address_id")
+    @JsonManagedReference
     private Address address;
 
     public Profile() {
