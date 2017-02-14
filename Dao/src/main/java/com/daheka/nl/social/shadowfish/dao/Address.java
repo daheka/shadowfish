@@ -21,7 +21,7 @@ public class Address implements Serializable {
     @Column(name="zip")
     private String zip;
 
-    @OneToMany(mappedBy = "address")
+    @OneToMany(mappedBy = "address", cascade = CascadeType.PERSIST)
     private List<Profile> profiles;
 
     public Address() {
