@@ -23,24 +23,31 @@ public class PersonController {
 
     @RequestMapping( value = "/person", method = RequestMethod.GET )
     @ResponseBody
-    public Iterable<Person> findAllUsers(){
+    public Iterable<Person> findAllPersons(){
         return repository.findAll();
     }
 
-    @RequestMapping(value="/person/{firstname}", method=RequestMethod.GET)
+//    @RequestMapping(value="/person/{firstname}", method=RequestMethod.GET)
+//    @ResponseBody
+//    public Person findUserByName(@PathVariable("firstname") String firstname) {
+//        return RestPreconditions.checkFound( repository.findByFirstName( firstname ) );
+//    }
+
+    @RequestMapping(value = "/person/{id}", method=RequestMethod.GET)
     @ResponseBody
-    public Person findUserByName(@PathVariable("firstname") String firstname) {
-        return RestPreconditions.checkFound( repository.findByFirstName( firstname ) );
+    public Person findPersonById(@PathVariable(value="{id}") Long id) {
+        return repository.findOne(id);
     }
 
     @RequestMapping(value="/person", method=RequestMethod.POST)
     @ResponseStatus( HttpStatus.CREATED )
     @ResponseBody
-    public Person createUser(@RequestParam("firstname") String firstname,
+    public Person createPerson(@RequestParam("firstname") String firstname,
                              @RequestParam("lastname") String lastname,
                              @RequestParam("age") int age,
-                             @RequestParam("gender") Gender gender) {
-        Person person = new Person(firstname, lastname, age, gender);
+                             @RequestParam("gender") Gender gender,
+                             @RequestParam("email") String email) {
+        Person person = new Person(firstname, lastname, age, gender, email);
         return repository.save(person);
     }
 

@@ -31,16 +31,16 @@ public class AppUserController {
 
     }
 
-    /**
-     * Rest method to get one user by username
-     * @param username The name of the user
-     * @return The user that was requested
-     */
-    @RequestMapping(value="/appUser/{username}", method=RequestMethod.GET)
-    @ResponseBody
-    public AppUser findUserByName(@PathVariable("username") String username) {
-        return RestPreconditions.checkFound( repository.findByUsername( username ) );
-    }
+//    /**
+//     * Rest method to get one user by username
+//     * @param username The name of the user
+//     * @return The user that was requested
+//     */
+//    @RequestMapping(value="/appUser/{username}", method=RequestMethod.GET)
+//    @ResponseBody
+//    public AppUser findUserByName(@PathVariable("username") String username) {
+//        return RestPreconditions.checkFound( repository.findByUsername( username ) );
+//    }
 
     /**
      * Rest method to create a new user
@@ -56,34 +56,34 @@ public class AppUserController {
         return repository.save(user);
     }
 
-    /**
-     * Rest method to update an existing user
-     * @param id The id of the to be updated user
-     * @param username The new username of the user
-     * @param password The new password of the user
-     * @return The updated user
-     */
-    @RequestMapping(value="/appUser/{id}", method=RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public AppUser updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
-        AppUser user = RestPreconditions.checkFound(repository.findOne(id));
-        user.setUsername(username);
-        user.setPassword(password);
-        return repository.save(user);
-    }
-
-    /**
-     * Rest method to delete an existing user
-     * @param id The id of the to be deleted user
-     * @return The deleted user
-     */
-    @RequestMapping(value="/appUser/{id}", method=RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public AppUser deleteUser(@PathVariable("id") Long id) {
-        AppUser user = RestPreconditions.checkFound(repository.findOne(id));
-        repository.delete(id);
-        return user;
-    }
+//    /**
+//     * Rest method to update an existing user
+//     * @param id The id of the to be updated user
+//     * @param username The new username of the user
+//     * @param password The new password of the user
+//     * @return The updated user
+//     */
+//    @RequestMapping(value="/appUser/{id}", method=RequestMethod.PUT)
+//    @ResponseStatus(HttpStatus.OK)
+//    @ResponseBody
+//    public AppUser updateUser(@PathVariable("id") Long id, @RequestParam("username") String username, @RequestParam("password") String password) {
+//        AppUser user = RestPreconditions.checkFound(repository.findOne(id));
+//        user.setUsername(username);
+//        user.setPassword(password);
+//        return repository.save(user);
+//    }
+//
+//    /**
+//     * Rest method to delete an existing user
+//     * @param id The id of the to be deleted user
+//     * @return The deleted user
+//     */
+//    @RequestMapping(value="/appUser/{id}", method=RequestMethod.DELETE)
+//    @ResponseStatus(HttpStatus.OK)
+//    @ResponseBody
+//    public AppUser deleteUser(@PathVariable("id") Long id) {
+//        AppUser user = RestPreconditions.checkFound(repository.findOne(id));
+//        repository.delete(id);
+//        return user;
+//    }
 }

@@ -37,11 +37,11 @@ public class ProfileController {
         return profileRepository.findOne(id);
     }
 
-    @RequestMapping(value="/profile/{appUser}", method=RequestMethod.GET)
-    @ResponseBody
-    public Profile findProfileByUser(@PathVariable(value="{appUser}") AppUser user) {
-        return profileRepository.findByAppUser(user);
-    }
+//    @RequestMapping(value="/profile/{appUser}", method=RequestMethod.GET)
+//    @ResponseBody
+//    public Profile findProfileByUser(@PathVariable(value="{appUser}") AppUser user) {
+//        return profileRepository.findByAppUser(user);
+//    }
 
     @RequestMapping(value="/profile", method=RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
@@ -51,16 +51,18 @@ public class ProfileController {
                                  @RequestParam(value="firstname") String firstname,
                                  @RequestParam(value="lastname") String lastname,
                                  @RequestParam(value="age") int age,
-                                 @RequestParam(value="gender") Gender gender
+                                 @RequestParam(value="gender") Gender gender,
+                                 @RequestParam(value="email") String email
                                  ) {
-        Person person = new Person(firstname, lastname, age, gender);
-        person = personRepository.save(person);
+        Person person = new Person(firstname, lastname, age, gender, email);
+//        person = personRepository.save(person);
         AppUser appUser = new AppUser(username, password);
-        appUser = appUserRepository.save(appUser);
+//        appUser = appUserRepository.save(appUser);
         Profile profile = new Profile();
         profile.setPerson(person);
         profile.setUser(appUser);
-        return profileRepository.save(profile);
+        profile = profileRepository.save(profile);
+        return profile;
     }
 
 }
