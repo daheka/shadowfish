@@ -27,7 +27,7 @@ public class PersonController {
         return repository.findAll();
     }
 
-    @RequestMapping(value="/person/{firstname}?{lastname}", method=RequestMethod.GET)
+    @RequestMapping(value="/person/{firstname}", method=RequestMethod.GET)
     @ResponseBody
     public Person findUserByName(@PathVariable("firstname") String firstname) {
         return RestPreconditions.checkFound( repository.findByFirstName( firstname ) );
