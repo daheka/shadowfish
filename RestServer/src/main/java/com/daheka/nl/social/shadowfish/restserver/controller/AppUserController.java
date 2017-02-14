@@ -24,7 +24,7 @@ public class AppUserController {
      * Rest method to get all users
      * @return A list of all users in the database
      */
-    @RequestMapping( value = "/appUser", method = RequestMethod.GET )
+    @RequestMapping( value = "/user", method = RequestMethod.GET )
     @ResponseBody
     public Iterable<AppUser> findAllUsers(){
         return repository.findAll();
@@ -48,7 +48,7 @@ public class AppUserController {
      * @param password The password of the new user
      * @return The user that was created
      */
-    @RequestMapping(value="/appUser", method=RequestMethod.POST)
+    @RequestMapping(value="/user", method=RequestMethod.POST)
     @ResponseStatus( HttpStatus.CREATED )
     @ResponseBody
     public AppUser createUser(@RequestParam("username") String username, @RequestParam("password") String password) {
