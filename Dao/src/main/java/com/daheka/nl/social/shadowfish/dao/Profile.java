@@ -14,13 +14,13 @@ public class Profile implements Serializable {
     @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.EAGER, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
-    @PrimaryKeyJoinColumn
+    @PrimaryKeyJoinColumn(name="user_id")
     private AppUser appUser;
     @OneToOne(fetch= FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
-    @PrimaryKeyJoinColumn
+    @PrimaryKeyJoinColumn(name="person_id")
     private Person person;
     @ManyToOne(fetch= FetchType.LAZY, optional = true, cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    @PrimaryKeyJoinColumn(name="address_id")
     private Address address;
 
     public Profile() {
