@@ -13,15 +13,12 @@ public class Profile {
     @Column(name="id")
     private Long id;
     @OneToOne(fetch= FetchType.EAGER, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
-//    @JoinColumn(name="user_id")
     @PrimaryKeyJoinColumn
     private AppUser appUser;
     @OneToOne(fetch= FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
-//    @JoinColumn(name="person_id")
     @PrimaryKeyJoinColumn
     private Person person;
     @ManyToOne(fetch= FetchType.LAZY, optional = true, cascade = CascadeType.ALL)
-//    @JoinColumn(name="address_id")
     @PrimaryKeyJoinColumn
     private Address address;
 

@@ -27,8 +27,10 @@ public class Address {
         // Empty constructor
     }
 
-    public Address(String streetName, int number) {
-
+    public Address(String streetName, int number, String zip) {
+        this.streetName = streetName;
+        this.number = number;
+        this.zip = zip;
     }
 
     public Long getId() {

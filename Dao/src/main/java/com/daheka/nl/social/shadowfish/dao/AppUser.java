@@ -21,6 +21,10 @@ public class AppUser {
     @OneToOne(mappedBy = "appUser")
     private Profile profile;
 
+    public AppUser() {
+        // Empty constructor
+    }
+
     public AppUser(String username, String password) {
         this.username = username;
         this.password = password;
