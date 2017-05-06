@@ -1,0 +1,125 @@
+/* Common classes */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+main {
+  margin: 0 0 100px;
+}
+
+.primary {
+  background-color: #607d8b;
+}
+
+.accent {
+  background-color: #00bcd4;
+}
+
+.background_color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index:-100;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.full-width {
+  width:100%;
+}
+
+.half-width {
+  width:49%;
+}
+
+.almost-full-width {
+  width:75%;
+}
+
+/* Top-menu */
+
+.logo {
+  height:25px;
+}
+
+.menu {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.border {
+  width:100%;
+  height:20px;
+  border-radius:2px;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.2), 3px 0 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.webdesign {
+  text-align:center;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  float:left;
+  display:inline-block;
+}
+
+.webdesign a {
+  text-decoration:none;
+  color:white
+}
+
+.webdesign a:hover {
+  text-decoration:none;
+  color:white;
+}
+
+.copyright {
+  text-align:right;
+  color:white;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  float:left;
+  display:inline-block;
+}
+
+/* Login */
+
+.login-form {
+  text-align:center;
+}
+
+.terms_and_services {
+  padding-left:20px;
+}
+
+/* Custom Dividers */
+
+.divider-horizontal {
+  width:100%;
+  margin: 9px 0;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.divider-vertical {
+  height: 50px;
+  margin: 0 9px;
+  border-right: 1px dashed #dddddd;
+  border-left: 1px dashed #f2f2f2;
+}

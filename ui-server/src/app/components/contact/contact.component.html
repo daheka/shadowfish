@@ -1,0 +1,67 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <div class="border primary"></div>
+  <div *ngIf="success" class="alert alert-success">Message was successfully send. Thank you!</div>
+  <md-card>
+    <md-card-title>Contact</md-card-title>
+    <md-card-content>
+      <form class="contact-form" [formGroup]="form" (ngSubmit)="submitForm()">
+        <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+          <td>
+            <md-input-container class="full-width">
+              <input required formControlName="firstName" #firstName mdInput placeholder="First name">
+              <span md-prefix><md-icon>person</md-icon>&nbsp;</span>
+              <md-error><control-messages [control]="form.controls.firstName"></control-messages></md-error>
+            </md-input-container>
+          </td>
+          &nbsp;
+          <td>
+            <md-input-container class="full-width">
+              <input required formControlName="lastName" mdInput placeholder="Last name">
+              <span md-prefix><md-icon>person</md-icon>&nbsp;</span>
+              <md-error><control-messages [control]="form.controls.lastName"></control-messages></md-error>
+            </md-input-container>
+          </td>
+        </tr></table>
+        <br>
+        <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+          <td>
+            <md-input-container class="full-width">
+              <input required formControlName="email" type="email" mdInput placeholder="Email">
+              <span md-prefix><md-icon>email</md-icon>&nbsp;</span>
+              <md-error><control-messages [control]="form.controls.email"></control-messages></md-error>
+            </md-input-container>
+          </td>
+          &nbsp;
+          <td>
+            <md-input-container class="full-width">
+              <input formControlName="phone" mdInput type="tel" placeholder="Phone">
+              <span md-prefix><md-icon>phone</md-icon>&nbsp;</span>
+              <md-error><control-messages [control]="form.controls.phone"></control-messages></md-error>
+            </md-input-container>
+          </td>
+        </tr></table>
+        <br>
+        <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+          <td>
+            <md-input-container class="full-width">
+              <input required formControlName="subject" mdInput type="text" placeholder="Subject">
+              <span md-prefix><md-icon>label</md-icon>&nbsp;</span>
+              <md-error><control-messages [control]="form.controls.subject"></control-messages></md-error>
+            </md-input-container>
+          </td>
+        </tr></table>
+        <br>
+        <p>
+          <md-input-container class="full-width">
+            <textarea required formControlName="message" mdInput rows="10" placeholder="Message"></textarea>
+            <md-error><control-messages [control]="form.controls.message"></control-messages></md-error>
+          </md-input-container>
+        </p>
+        <br>
+        <button color="primary" [disabled]="!form.valid" name="submit" md-raised-button><md-icon>check</md-icon>&nbsp;Submit</button>
+        <button color="accent" [disabled]="!form.dirty" (click)="clearForm()" name="clear" md-raised-button><md-icon>clear</md-icon>&nbsp;Clear</button>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>

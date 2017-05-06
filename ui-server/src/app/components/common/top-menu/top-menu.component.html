@@ -1,0 +1,30 @@
+<md-toolbar class="menu" color="primary">
+  <img class="logo" src="../../../assets/squared_white.png"/>
+  <p class="divider-vertical"></p>
+
+  <md-menu #aboutMenu="mdMenu" [overlapTrigger]="false">
+    <button md-menu-item routerLink="/rules"> Rules </button>
+    <button md-menu-item routerLink="/team"> The Team </button>
+    <button md-menu-item routerLink="/terms-and-conditions"> Terms & Conditions </button>
+  </md-menu>
+
+  <md-menu #homeMenu="mdMenu" [overlapTrigger]="false">
+    <button md-menu-item routerLink="/news"> News </button>
+    <button md-menu-item routerLink="/upcoming-events"> Upcoming Events </button>
+    <button md-menu-item routerLink="/contact"> Contact </button>
+  </md-menu>
+
+  <searchbox [options]="searches"></searchbox>
+
+  <p class="divider-vertical"></p>
+
+  <button md-button [mdMenuTriggerFor]="homeMenu">
+    Home
+    <md-icon>keyboard_arrow_down</md-icon>
+  </button>
+  <button md-button [mdMenuTriggerFor]="aboutMenu">
+    About
+    <md-icon>keyboard_arrow_down</md-icon>
+  </button>
+
+</md-toolbar>

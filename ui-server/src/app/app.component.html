@@ -1,0 +1,10 @@
+<top-menu *ngIf="isAuthenticated()"></top-menu>
+<div class="background_color primary" [hidden]="isAuthenticated()"></div>
+<div class="background_color accent" [hidden]="!isAuthenticated()"></div>
+<main>
+  <br>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer class="footer"></footer>

@@ -1,0 +1,17 @@
+<form id="search_category">
+  <md-menu #optionMenu="mdMenu" [overlapTrigger]="false">
+    <button *ngFor="let option of options" (click)="setCurrentOption(option)" md-menu-item>{{ option.viewValue }}</button>
+  </md-menu>
+
+  <button #searchSelect md-button [mdMenuTriggerFor]="optionMenu" id="search_select">
+    {{currentOption.value}}
+    <md-icon>keyboard_arrow_down</md-icon>
+  </button>
+</form>
+
+<form id="search_container">
+  <input type="text" #searchText name="search_text" id="search_text" (keyup.enter)="search(searchText.value, $event)" placeholder="Search..."/>
+
+  <button id="search_button"><i id="search_icon" (click)="search(searchText.value, $event)" class="material-icons">search</i></button>
+</form>
+

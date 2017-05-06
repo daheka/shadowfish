@@ -1,0 +1,702 @@
+[
+  {
+    "name": "Metallica",
+    "bandURL": "http://www.nporadio2.nl/images/nporadio2/nporadio2/2017/nieuws/metallica-2016.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "James Hetfield",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Kirk Hemmet",
+        "instrument": "Guitar"
+      },
+      {
+        "name": "Robert Trujillo",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Lars Ulrich",
+        "instrument": "Drums"
+      }
+    ],
+    "exbandmembers": [{
+      "name": "Jason Newsted",
+      "instrument": "Bass"
+    },
+      {
+        "name": "Cliff Burton",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Dave Mustaine",
+        "instrument": "Leadguitar"
+      },
+      {
+        "name": "Ron McGovney",
+        "instrument": "Bass"
+      }
+    ]
+  },
+  {
+    "name": "Bullet for my Valentine",
+    "bandURL": "https://s-media-cache-ak0.pinimg.com/originals/28/37/9b/28379bd5e404dad2ee8df74ad65e0bf8.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Rammstein",
+    "bandURL": "https://metalfans.be/sites/default/files/nieuws/rammstein.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Linkin Park",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "System of a Down",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Nightwish",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Within Temptation",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Evanescence",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Slipknot",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Children of Bodom",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Disturbed",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Disturbed",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Iron Maiden",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "30 Seconds to Mars",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Marilyn Manson",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Slayer",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "KoRn",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Nirvana",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Amon Amarth",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Green Day",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  },
+  {
+    "name": "Sonata Artica",
+    "bandURL": "http://www.blackbunny.nl/bands/00000482.jpg",
+    "country": "United States",
+    "bandmembers": [
+      {
+        "name": "Matthew 'Matt' Tuck",
+        "instrument": "Singer/Guitar"
+      },
+      {
+        "name": "Michael 'Padge' Paget",
+        "instrument": "Leadguitar/Backup Singer"
+      },
+      {
+        "name": "Michael 'Moose' Thomas",
+        "instrument": "Drums"
+      },
+      {
+        "name": "Jamie Mathias",
+        "instrument": "Bass"
+      }
+    ],
+    "exbandmembers": [
+      {
+        "name": "Nick Crandle",
+        "instrument": "Bass"
+      },
+      {
+        "name": "Jason 'Jay' James",
+        "instrument": "Bass/Singer"
+      }
+    ]
+  }
+]

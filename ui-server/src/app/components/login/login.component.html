@@ -1,0 +1,110 @@
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <div *ngIf="errorMessage !== null" class="alert alert-danger">Username or password is not correct</div>
+  <div class="border accent"></div>
+  <md-card>
+    <md-card-title>
+      <img class="logo" src="../../../assets/squared.png"/>
+    </md-card-title>
+
+    <md-card-content>
+      <md-tab-group>
+        <md-tab label="Login">
+          <br>
+          <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="almost-full-width">
+                  <input required formControlName="username" mdInput placeholder="Username">
+                  <span md-prefix><md-icon>account_box</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="loginForm.controls.username"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="almost-full-width">
+                  <input required formControlName="password" type="password" mdInput placeholder="Password">
+                  <span md-prefix><md-icon>lock</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="loginForm.controls.password"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <button [disabled]="!loginForm.valid" type="submit" class="almost-full-width" color="primary" name="create-account" md-raised-button><md-icon>exit_to_app</md-icon>&nbsp;Login</button>
+          </form>
+        </md-tab>
+
+        <md-tab label="Register">
+          <br>
+          <form class="register-form" [formGroup]="accountForm" (ngSubmit)="createAccount(loginForm.value)">
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="full-width">
+                  <input required formControlName="firstName" mdInput placeholder="First name">
+                  <span md-prefix><md-icon>person</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.firstName"></control-messages></md-error>
+                </md-input-container>
+              </td>
+              &nbsp;
+              <td>
+                <md-input-container class="full-width">
+                  <input required formControlName="lastName" mdInput placeholder="Last name">
+                  <span md-prefix><md-icon>person</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.lastName"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="full-width">
+                  <input required formControlName="username" type="username" mdInput placeholder="Username">
+                  <span md-prefix><md-icon>account_box</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.username"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="full-width">
+                  <input required formControlName="email" mdInput type="text" placeholder="Email">
+                  <span md-prefix><md-icon>email</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.email"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <table class="full-width" cellpadding="20" cellspacing="0"><tr>
+              <td>
+                <md-input-container class="full-width">
+                  <input required type="password" formControlName="password" mdInput placeholder="Password">
+                  <span md-prefix><md-icon>lock</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.password"></control-messages></md-error>
+                </md-input-container>
+              </td>
+              &nbsp;
+              <td>
+                <md-input-container class="full-width">
+                  <input required type="password" formControlName="confirmPassword" mdInput placeholder="Confirm password">
+                  <span md-prefix><md-icon>lock</md-icon>&nbsp;</span>
+                  <md-error><control-messages [control]="accountForm.controls.confirmPassword"></control-messages></md-error>
+                </md-input-container>
+              </td>
+            </tr></table>
+            <br>
+            <md-checkbox formControlName="checkbox" class="terms_and_services">I agree to the Terms and Conditions</md-checkbox>
+            <br>
+            <div class="divider-horizontal"></div>
+            <br>
+            <button class="half-width" [disabled]="!accountForm.valid" color="primary" name="create-account" md-raised-button><md-icon>person_add</md-icon>&nbsp;Create Account</button>
+            <button class="half-width" [disabled]="!accountForm.dirty" (click)="clearForm()" color="accent" name="clear" md-raised-button><md-icon>clear</md-icon>&nbsp;Clear Form</button>
+          </form>
+        </md-tab>
+      </md-tab-group>
+    </md-card-content>
+  </md-card>
+</div>
+

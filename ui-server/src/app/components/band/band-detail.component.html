@@ -1,0 +1,72 @@
+<div class="border primary"></div>
+<md-card>
+<md-tab-group>
+  <md-tab label="About">
+    <md-card *ngIf="currentBand">
+      <md-card-header>
+        <md-card-title><h1>{{currentBand.name}}</h1></md-card-title>
+      </md-card-header>
+      <img md-card-image src="{{ currentBand.bandURL }}">
+      <md-card-content>
+        <md-grid-list cols="4">
+          <md-grid-tile *ngIf="currentBand.bandMembers" colspan="2">
+            <md-list>
+              <md-list-item><h3>Band members</h3></md-list-item>
+              <md-divider></md-divider>
+              <md-list-item *ngFor="let bandmember of currentBand.bandMembers">
+                <strong>{{ bandmember.name }}</strong> : {{ bandmember.instrument }}</md-list-item>
+            </md-list>
+          </md-grid-tile>
+          <md-grid-tile *ngIf="currentBand.exBandMembers" colspan="2">
+            <md-list>
+              <md-list-item><h3>Ex-band members</h3></md-list-item>
+              <md-divider></md-divider>
+              <md-list-item *ngFor="let exbandmember of currentBand.exBandMembers">
+                <strong>{{ exbandmember.name }}</strong> : {{ exbandmember.instrument }}</md-list-item>
+            </md-list>
+          </md-grid-tile>
+        </md-grid-list>
+      </md-card-content>
+    </md-card>
+  </md-tab>
+
+  <md-tab label="Upcoming Events">
+    <md-card>
+      <md-card-content>
+        <div class="alert alert-danger" *ngIf="error">
+          {{currentBand.name}} {{error}}
+        </div>
+        <div class="alert alert-warning" *ngIf="warning">
+          {{ currentBand.name }} {{warning}}
+        </div>
+        <table class="table" *ngIf="events">
+          <thead>
+          <tr>
+            <th>Line up</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Venue</th>
+            <th>Tickets</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let event of events">
+            <td>{{ event.lineUp }}</td>
+            <td><span class="label label-default">{{ event.datetime | date: 'EEEE, MMMM d, y' }}</span></td>
+            <td><span class="label label-primary">{{ event.datetime | date: 'HH:mm'}}</span></td>
+            <td>{{ event.venue.country }}</td>
+            <td>{{ event.venue.city }}</td>
+            <td>{{ event.venue.name }}</td>
+            <td>{{ event.offers[0].status}}</td>
+            <td><a href="{{ event.offers[0].url}}">Buy tickets</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </md-card-content>
+    </md-card>
+  </md-tab>
+</md-tab-group>
+</md-card>

@@ -1,0 +1,16 @@
+<div>
+  <h1>Bands</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let band of bands">
+      <td><a [routerLink]="['/bands', band.name]" (click)="getBand(band)">{{ band.name }}</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,76 @@
+#search {
+  width: 357px;
+  margin: 4px;
+}
+
+#search_container {
+  float:left;
+}
+
+#search_category {
+  float: left;
+  margin-right:10px;
+}
+
+#search_text{
+  width: 200px;
+  padding: 15px 0 15px 20px;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  border: 0 none;
+  height: 40px;
+  margin-right: 0;
+  color: black;
+  outline: none;
+  background: white;
+  float: left;
+  box-sizing: border-box;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  border-radius: 10px 0 0 10px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #afafaf;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #afafaf;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #afafaf;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #afafaf;
+}
+
+#search_button {
+  border: 0 none;
+  background: #00bcd4 center no-repeat;
+  width: 45px;
+  float: left;
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+}
+
+#search_icon {
+  padding-top:7px;
+}
+
+#search_select {
+  border: 0 none;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  width: 100px;
+  float: left;
+  padding-right: 0;
+  text-align-last: left;
+  padding-left:10px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}

@@ -1,0 +1,44 @@
+<div>
+  <h1>Events</h1>
+  <div>
+    <!--<input type="text" #keyword class="input-lg" placeholder="artist name...">-->
+    <md-input-container>
+      <input mdInput #keyword placeholder="artist name" value="">
+    </md-input-container>
+    &nbsp;
+    <button md-button (click)="searchEvents(keyword.value)"><md-icon>search</md-icon>&nbsp;Search Events</button>
+  </div>
+  <br>
+  <div class="alert alert-danger" *ngIf="error">
+    {{error}}
+  </div>
+  <div class="alert alert-warning" *ngIf="warning">
+    {{warning}}
+  </div>
+  <table class="table" *ngIf="events">
+    <thead>
+    <tr>
+      <th>Line up</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Venue</th>
+      <th>Tickets</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let event of events">
+      <td>{{ event.lineUp }}</td>
+      <td><span class="label label-default">{{ event.datetime | date: 'EEEE, MMMM d, y' }}</span></td>
+      <td><span class="label label-primary">{{ event.datetime | date: 'HH:mm'}}</span></td>
+      <td>{{ event.venue.country }}</td>
+      <td>{{ event.venue.city }}</td>
+      <td>{{ event.venue.name }}</td>
+      <td>{{ event.offers[0].status}}</td>
+      <td><a href="{{ event.offers[0].url}}">Buy tickets</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
